@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+   
+<header>
+<h1> CineHub </h1>
+</header>
+<h2> Seja bem-vindo(a) ao CineHub! Nosso site foi feito especialmente para você que gosta muito de assistir filmes, ou que simplesmente gosta de listas e organização. O intuito do CineHub é fornecer ao usuário uma oportunidade de dar notas e fazer comentários sobre os filmes que assistiu, podendo também ter recomendação de filmes de acordo com o gênero desejado!</h2>
+<div id="form">
+   
+    <div class="container-inputs">
+       <label for="">Nome do filme:</label>
+        <input id="input-nome" type="text">
+    </div>
+
+    <div class="container-inputs">
+        <label for="">Ano de lançamento:</label>
+        <input id="input-ano" type="number" min="1900">
+    </div>
+
+    <div class="container-inputs">
+        <label for="">Nota (de 1 a 5):</label>
+        <input id="input-nota" type="number" min="1" max="5">
+    </div>
+
+    <div class="container-inputs">
+        <label for="">Resenha (opcional): </label>
+        <input id="input-resenha" type="text-long">
+    </div>
+
+</div>
+
+<button onclick="cadastrarFilme()">cadastrar</button>
+<button onclick="salvarFilme()">salvar</button>
+<button onclick="excluirFilme()">excluir</button>
+
+<br>
+
+<hr>
+<button onclick="mostrarTodos()">mostrar todos os filmes</button>
+<br>
+
+    <div id="painel-filmes">
+        tem nada dentro
+    </div>
+
+
+
+<section class="area-recomendacao">
+  <h2>Descubra novos filmes !!</h2>
+  
+  <select id="filtro-recomendacao">
+    <option value="">Escolha um genêro:</option>
+    <option value="açao">Ação</option>
+    <option value="comedia">Comédia</option>
+    <option value="terror">Terror</option>
+    <option value="romance">Romance</option>
+    <option value="animaçao">Animação</option>
+    <option value="ficcao cientifica">Ficção cientifica</option>
+    <option value="drama">Drama</option>
+    <option value="fantasia">Fantasia</option>
+  </select>
+  
+  <button onclick="recomendarFilmes()">Recomendação</button>
+  
+  <div id="painel-recomendacoes"></div>
+</section>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
