@@ -10,25 +10,23 @@
 
 // titulo: O nome do filme (texto).
 
-// ano: ano de lançamento (numero).
+// ano: ano de lançamento (numero).).
 
-// genero: O gênero principal (texto ou um <select> no HTML).
+// nota: A avaliação de 1 a 5 estrelas (número).
 
-// nota: A avaliação do usuário, de 1 a 5 estrelas (número).
-
-// resenha: A opinião/comentário do usuário sobre o filme (Texto longo).
+// resenha: A opinião/comentário do usuário sobre o filme (texto longo).
 
 let filmes = []
 
 function cadastrarFilme() {
 const novoFilme = {
-id: Date.now(),
 nome: document.getElementById('input-nome').value,
 ano: Number(document.getElementById("input-ano").value),
 nota: Number(document.getElementById("input-nota").value),
 resenha: document.getElementById("input-resenha").value,
+genero: document.getElementById("input-genero-cadastro").value
 }
-filmes.push(novoFilme)
+filmes.push(novoFilme);
 
 console.log(filmes);
 
@@ -41,9 +39,7 @@ document.getElementById('input-nome').value = ''
 document.getElementById('input-ano').value = ''
 document.getElementById('input-nota').value = ''
 document.getElementById('input-resenha').value = ''
-document.getElementById('input-id').value = ''
-
-document.getElementById('input-nome').focus()
+document.getElementById('input-genero-cadastro').value = ''
 }
 
 function mostrarTodos(){
@@ -53,13 +49,14 @@ for(let i=0; i<filmes.length; i++){
 document.getElementById('painel-filmes').innerHTML += `<div class="card-filme">
  <h2>${filmes[i].nome}</h2>
  <p>ano: ${filmes[i].ano}</p>
+ <p>gênero: ${filmes[i].genero}</p>
  <p>nota: ${filmes[i].nota}</p>
  <p>resenha: ${filmes[i].resenha}</p>
- <p>${filmes[i].id}</p>
     </div>` 
 }
+}
 
-
+function recomendarFilmes(){
 let painelDeRecomendacoes = [
   { 
     titulo: "Scarface", 
@@ -260,8 +257,22 @@ let painelDeRecomendacoes = [
   { 
     titulo: "Labirinto do Fauno", 
     genero: "Fantasia",
-    imagem: " " 
+    imagem: "" 
   }
 ];
+
+let generoEscolhido = document.getElementById('filtro-recomendacao').value;
+let painel = document.getElementById('painel-recomendacoes');
+  
+painel.innerHTML = '';
+
+if (generoEscolhido === "") {
+painel.innerHTML = '<p>Por favor, selecione um gênero.</p>';
+return;
+}
+
+let filmesSelecionados = painelDeRecomendacoes.filter(function(filme){
+return filme.genero === generoEscolhido;
+});
 
 }

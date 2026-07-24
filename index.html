@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,66 +11,79 @@
 <header>
 <h1> CineHub </h1>
 </header>
+
 <h2> Seja bem-vindo(a) ao CineHub! Nosso site foi feito especialmente para você que gosta muito de assistir filmes, ou que simplesmente gosta de listas e organização. O intuito do CineHub é fornecer ao usuário uma oportunidade de dar notas e fazer comentários sobre os filmes que assistiu, podendo também ter recomendação de filmes de acordo com o gênero desejado!</h2>
+<hr>
+
 <div id="form">
-   
+
     <div class="container-inputs">
-       <label for="">Nome do filme:</label>
+       <label for=""> Nome do filme: </label>
         <input id="input-nome" type="text">
     </div>
 
     <div class="container-inputs">
-        <label for="">Ano de lançamento:</label>
+        <label for=""> Ano de lançamento: </label>
         <input id="input-ano" type="number" min="1900">
+    </div>
+    
+    <div class="container-inputs">
+        <label for="input-genero-cadastro"> Gênero do filme: </label>
+        <select id="input-genero-cadastro">
+            <option value="">Selecionar</option>
+            <option value="Ação">Ação</option>
+            <option value="Comédia">Comédia</option>
+            <option value="Terror">Terror</option>
+            <option value="Romance">Romance</option>
+            <option value="Animação">Animação</option>
+            <option value="Ficção Cientifica">Ficção Científica</option>
+            <option value="Drama">Drama</option>
+            <option value="Fantasia">Fantasia</option>
+        </select>
     </div>
 
     <div class="container-inputs">
-        <label for="">Nota (de 1 a 5):</label>
+        <label for=""> Nota (de 1 a 5): </label>
         <input id="input-nota" type="number" min="1" max="5">
     </div>
 
     <div class="container-inputs">
-        <label for="">Resenha (opcional): </label>
-        <input id="input-resenha" type="text-long">
+        <label for=""> Resenha (opcional): </label>
+        <input id="input-resenha" type="text">
     </div>
 
 </div>
 
+<div id="filmeCadastrado">
+
 <button onclick="cadastrarFilme()">cadastrar</button>
-<button onclick="salvarFilme()">salvar</button>
-<button onclick="excluirFilme()">excluir</button>
-
-<br>
-
 <hr>
-<button onclick="mostrarTodos()">mostrar todos os filmes</button>
-<br>
-
     <div id="painel-filmes">
-        tem nada dentro
     </div>
-
+</div>
 
 
 <section class="area-recomendacao">
-  <h2>Descubra novos filmes !!</h2>
+
+  <h3>Descubra novos filmes !!</h3>
   
   <select id="filtro-recomendacao">
     <option value="">Escolha um genêro:</option>
-    <option value="açao">Ação</option>
-    <option value="comedia">Comédia</option>
-    <option value="terror">Terror</option>
-    <option value="romance">Romance</option>
-    <option value="animaçao">Animação</option>
-    <option value="ficcao cientifica">Ficção cientifica</option>
-    <option value="drama">Drama</option>
-    <option value="fantasia">Fantasia</option>
+    <option value="Ação">Ação</option>
+    <option value="Comédia">Comédia</option>
+    <option value="Terror">Terror</option>
+    <option value="Romance">Romance</option>
+    <option value="Animação">Animação</option>
+    <option value="Ficção Científica">Ficção cientifica</option>
+    <option value="Drama">Drama</option>
+    <option value="Fantasia">Fantasia</option>
   </select>
   
+</section>
+<br>
   <button onclick="recomendarFilmes()">Recomendação</button>
   
   <div id="painel-recomendacoes"></div>
-</section>
 
     <script src="script.js"></script>
 

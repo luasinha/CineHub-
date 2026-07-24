@@ -1,9 +1,10 @@
 body{
-   background: linear-gradient(45deg,hwb(357 75% 0%), lch(73.39% 38.99 23.12));
+    background: linear-gradient(45deg,hwb(0 100% 0%), oklab(92.78800000000001% 0.03488 0.01111));
     color: hwb(327 25% 34%);
     font-size: larger;
-    text-shadow: 0 0 10px lab(56.48% 45.77 -9.97), 0 0 30px rgba(255,140,220,.7), 0 0 60px rgba(180,120,255,.6);
     text-align: center;
+    height: 100%;
+    padding: 0;
 }
 
 header{
@@ -11,16 +12,18 @@ header{
     background-color:  hwb(327 19% 53%);;
     text-align: center;
     padding: 1px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
 }
 
 h1{
     font-size: xx-large;
 }
-
-output{
-    color:  hwb(327 19% 53%);
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    text-align: center;
+h2{
+    font-size: large;
+    margin-top: 90px;
 }
 
 #resultado{
@@ -28,8 +31,8 @@ output{
 }
 
 button{
-    background: linear-gradient(45deg, oklch(82.05% 0.15952 145.023),#db9862);
-    color: lab(45.69% 50.55 -11.1);
+    background: hwb(327 25% 34%);;
+    color: lch(100% 0.01 296.81);
     border-radius: 50px;
     padding: 2px 10px;
     border: black;
@@ -40,12 +43,13 @@ button{
 
 button:hover{
     transform: scale(1.08);
-    background-color: oklab(76.179% -0.12434 0.10566);
+    background-color: lch(38.2% 43.73 346.88);;
 }
 #form{
     text-align: right;
     width: fit-content;
     margin: 0 auto;
+    color: black;
 }
 
 input{
@@ -53,32 +57,8 @@ input{
     width: 100px;
     text-shadow: none;
 }
-/* Organiza os cards lado a lado */
-#painel-recomendacoes {
-  display: flex;
-  gap: 15px;
-  margin-top: 20px;
-}
 
-/* O tamanho de cada card */
-.card-recomendacao {
-  width: 150px;
-  background-color: #2c3440;
-  border-radius: 8px;
-  overflow: hidden; /* Esconde pontas quadradas da imagem */
-  text-align: center;
-  color: white;
-}
-
-/* Força todas as imagens a terem o mesmo tamanho */
-.card-recomendacao img {
-  width: 100%;
-  height: 220px;
-  object-fit: cover; /* Faz a imagem preencher o espaço sem distorcer */
-}
-
-.card-recomendacao h3 {
-  font-size: 14px;
-  padding: 10px;
-  margin: 0;
+#painel-filmes{
+    text-align: left;
+    color: black;
 }
