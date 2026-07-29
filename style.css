@@ -1,64 +1,97 @@
 body{
-    background: linear-gradient(45deg,hwb(0 100% 0%), oklab(92.78800000000001% 0.03488 0.01111));
-    color: hwb(327 25% 34%);
-    font-size: larger;
-    text-align: center;
-    height: 100%;
-    padding: 0;
+background: linear-gradient(45deg,hwb(0 100% 0%), oklab(92.78800000000001% 0.03488 0.01111));
+color: hwb(327 25% 34%);
+font-size: larger;
+text-align: center;
+height: 100%;
+padding: 0;
 }
 
 header{
-    color: rgb(255, 255, 255);
-    background-color:  hwb(327 19% 53%);;
-    text-align: center;
-    padding: 1px;
-    width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
+color: rgb(255, 255, 255);
+background-color:  hwb(327 19% 53%);;
+text-align: center;
+padding: 1px;
+width: 100%;
+position: fixed;
+top: 0;
+left: 0;
 }
 
 h1{
-    font-size: xx-large;
+font-size: xx-large;
 }
 h2{
-    font-size: large;
-    margin-top: 90px;
+font-size: large;
+margin-top: 90px;
 }
 
 #resultado{
-    background-color:  hwb(327 19% 53%);
+background-color:  hwb(327 19% 53%);
 }
 
 button{
-    background: hwb(327 25% 34%);;
-    color: lch(100% 0.01 296.81);
-    border-radius: 50px;
-    padding: 2px 10px;
-    border: black;
-    font-size: 18px;
-    font-weight:600;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+background: hwb(327 25% 34%);;
+color: lch(100% 0.01 296.81);
+border-radius: 50px;
+padding: 2px 10px;
+border: black;
+font-size: 18px;
+font-weight:600;
+font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 }
 
 button:hover{
-    transform: scale(1.08);
-    background-color: lch(38.2% 43.73 346.88);;
+transform: scale(1.08);
+background-color: lch(38.2% 43.73 346.88);;
 }
+
 #form{
-    text-align: right;
-    width: fit-content;
-    margin: 0 auto;
-    color: black;
+text-align: right;
+width: fit-content;
+margin: 0 auto;
+color: black;
 }
 
 input{
-    border:  black 1px solid;
-    width: 100px;
-    text-shadow: none;
+border:  black 1px solid;
+width: 100px;
+text-shadow: none;
 }
 
 #painel-filmes{
-    text-align: left;
-    color: black;
+text-align: left;
+color: black;
+}
+
+#painel-recomendacoes {
+display: flex; /* Faz os cartões ficarem um ao lado do outro */
+flex-wrap: wrap; /* Se não couber na linha, pula para a de baixo */
+gap: 20px; /* Dá um espaço entre os cartões */
+justify-content: center; /* Centraliza os cartões na tela */
+padding: 20px;
+}
+
+.card-recomendacao {
+border: 1px solid #ccc; 
+border-radius: 8px; 
+width: 150px; 
+text-align: center; 
+padding: 10px;
+background-color: #f9f9f9; 
+box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+}
+
+.card-recomendacao img {
+width: 100%; 
+height: 225px; 
+object-fit: cover; 
+border-radius: 4px; 
+margin-bottom: 10px; 
+}
+
+.card-recomendacao h4 {
+margin: 0; 
+font-size: 14px; 
+color: #333;
 }
